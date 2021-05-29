@@ -4,3 +4,14 @@ declare @JsonData nvarchar (max);
 set @JsonData  = (select * from [dbo].[AutoManufacturers]  for JSON PATH)
 select @JsonData as Autoo
 ---------------------------------------------------------------------------------------
+
+
+--1 default
+Select EmploymentTitleId, EmploymentTitle As EmploymentTitle1 From EmploymentTitle FOR JSON path,INCLUDE_NULL_VALUES
+--2 with no column name
+select (Select EmploymentTitleId, EmploymentTitle As EmploymentTitle1 From EmploymentTitle FOR JSON path,INCLUDE_NULL_VALUES)
+--3 with column name
+select Hello =  (Select EmploymentTitleId, EmploymentTitle As EmploymentTitle1 From EmploymentTitle FOR JSON path,INCLUDE_NULL_VALUES)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
