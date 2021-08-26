@@ -1,0 +1,13 @@
+DECLARE @Value varchar(25)
+DECLARE @Separator INT
+DECLARE @STRINGC VARCHAR(MAX) 
+SET @STRINGC='NISARG,NIRALI,RAMESH,SURESH'
+		SET @STRINGC = @STRINGC+','
+		WHILE PATINDEX('%,%', @STRINGC) <> 0 
+			BEGIN
+			     SELECT  @Separator= PATINDEX('%,%',@STRINGC)
+			     SELECT  @Value= LEFT(@STRINGC, @Separator- 1)
+			     SELECT  @STRINGC= STUFF(@STRINGC, 1, @Separator, '')
+			SELECT Separator= @Separator,Value=@Value,STRINGC=@STRINGC
+			    --INSERT INTO RolePermissions(RoleId,PermissionId,CreatedOn,ModifiedOn) VALUES(@RoleId, @value,GETDATE(),GETDATE())
+			END
