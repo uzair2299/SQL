@@ -11,3 +11,24 @@ SET @STRINGC='NISARG,NIRALI,RAMESH,SURESH'
 			SELECT Separator= @Separator,Value=@Value,STRINGC=@STRINGC
 			    --INSERT INTO RolePermissions(RoleId,PermissionId,CreatedOn,ModifiedOn) VALUES(@RoleId, @value,GETDATE(),GETDATE())
 			END
+
+
+
+
+NOTES
+The PATINDEX() function returns the position of a pattern in a string.
+If the pattern is not found, this function returns 0.
+The search is case-insensitive and the first position in string is 1.
+PATINDEX(%pattern%, string)
+	%pattern% Required. The pattern to find. It MUST be surrounded by %.
+	string	Required. The string to be searched
+
+
+STUFF()
+The STUFF function inserts a string into another string.
+It deletes a specified length of characters in the first string at the start position and then inserts the second string into the first string at the start position
+STUFF ( input_string , start_position , length , replace_with_substring )
+	input_string is the character string to be processed.
+	start_position is an integer that identifies the position to start deletion and insertion. If start_position is negative, zero, or longer than the length of the string, the function will return NULL.
+	length specifies the number of characters to delete. If the length is negative, the function returns NULL. If  length is longer than the length of the input_string, the function will delete the whole string. In case length is zero, the function will insert the replace_with_substring at the beginning of the input_string.
+	replace_with_substring is a substring that replaces length characters of the input_string beginning at start_position.
