@@ -12,4 +12,6 @@ The scaffolded DbContext class name will be the name of the database suffixed wi
 Directories and namespaces
 The entity classes and a DbContext class are scaffolded into the project's root directory and use the project's default namespace.
 
+You can specify the directory where classes are scaffolded using -OutputDir, and -ContextDir can be used to scaffold the DbContext class into a separate directory from the entity type classes:
+
 Scaffold-DbContext 'Data Source=DESKTOP-QCC8VQL\SQLEXPRESS;Initial Catalog=PointOfSale;Trusted_Connection=True;Persist Security Info=False;MultipleActiveResultSets=False' Microsoft.EntityFrameworkCore.SqlServer
