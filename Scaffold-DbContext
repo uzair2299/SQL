@@ -1,0 +1,1 @@
+Scaffold-DbContext 'Data Source=DESKTOP-QCC8VQL\SQLEXPRESS;Initial Catalog=PointOfSale;Trusted_Connection=True;Persist Security Info=False;MultipleActiveResultSets=False' Microsoft.EntityFrameworkCore.SqlServer
