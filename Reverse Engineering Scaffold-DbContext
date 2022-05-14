@@ -1,0 +1,13 @@
+Prerequisites
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Design
+Microsoft.EntityFrameworkCore.Tools
+
+The first argument to the command is a connection string to the database
+The second argument is the provider name. The provider name is typically the same as the provider's NuGet package name.
+
+
+The scaffolded DbContext class name will be the name of the database suffixed with Context by default.To specify a different one, use -Context in PMC and --context in the .NET Core CLI.
+
+
+Scaffold-DbContext 'Data Source=DESKTOP-QCC8VQL\SQLEXPRESS;Initial Catalog=PointOfSale;Trusted_Connection=True;Persist Security Info=False;MultipleActiveResultSets=False' Microsoft.EntityFrameworkCore.SqlServer
