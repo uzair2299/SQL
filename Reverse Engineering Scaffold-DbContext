@@ -20,3 +20,5 @@ You can specify the directory where classes are scaffolded using -OutputDir, and
 
 e.g
 Scaffold-DbContext 'Data Source=DESKTOP-QCC8VQL\SQLEXPRESS;Initial Catalog=AdventureWorksLT2017;Trusted_Connection=True;'  Microsoft.EntityFrameworkCore.SqlServer -ContextDir Data -OutputDir Models
+
+By default, the namespace will be the root namespace plus the names of any subdirectories under the project's root directory. However, from EFCore 5.0 onwards, you can override the namespace for all output classes by using -Namespace. You can also override the namespace for just the DbContext class using -ContextNamespace.
